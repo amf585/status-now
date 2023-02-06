@@ -3,7 +3,7 @@ import React from 'react'
 function Home() {
   return (
     <>
-      <div>Welcome to Spouse Status</div>    
+      <div>Welcome to Spouse Status Home</div>    
     </>
   )
 }

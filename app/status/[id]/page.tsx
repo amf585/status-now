@@ -29,7 +29,7 @@ async function Status(props: PageProps) {
         <main>
             <div className='grid p-8 place-content-center text-xl w-full'>
                 <div className='px-10 w-screen'>
-                    <MoodItem value={status.currentMood.toString()} />
+                    <MoodItem color={status.lightColor} value={status.currentMood.toString()} />
                     <StatusItem label='Call' value={status.callAvailability} />
                     <StatusItem label='In Meeting' value={boolToAffirmOrNeg(status.inMeeting)} />
                     <StatusItem label='Headphones' value={boolToAffirmOrNeg(status.headphonesOn)} />

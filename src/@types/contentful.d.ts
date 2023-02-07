@@ -3,8 +3,8 @@
 import { Asset, Entry } from "contentful";
 
 export interface IStatusFields {
-  /** Current Mood */
-  currentMood: "Happy" | "Neutral" | "Sad" | "Angry" | "Stressed";
+  /** Light Color */
+  lightColor: "Green" | "Red";
 
   /** Call Availability */
   callAvailability: "Anytime" | "Ask" | "Emergency Only";
@@ -14,6 +14,19 @@ export interface IStatusFields {
 
   /** Headphones On */
   headphonesOn?: boolean | undefined;
+
+  /** Current Mood */
+  currentMood:
+    | "Angry"
+    | "Annoyed"
+    | "Calm"
+    | "Excited"
+    | "Happy"
+    | "Nervous"
+    | "Neutral"
+    | "Overwhelmed"
+    | "Sad"
+    | "Stressed";
 
   /** End of Workday */
   endOfWorkday?: string | undefined;

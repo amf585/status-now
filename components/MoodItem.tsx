@@ -1,20 +1,21 @@
 import React from 'react'
 
 interface IMoodItem {
-  value: string
+    color: "Green" | "Red",
+    value: string
 }
 
-const MoodItem:React.FC<IMoodItem> = ({value}) => {
+const MoodItem:React.FC<IMoodItem> = ({color, value}) => {
 
-    const classes = ['Happy', 'Neutral', 'Calm'].includes(value) ? 'bg-green-600 border-green-700' : 'bg-red-600 border-red-700'
+    const classes = `bg-${color.toLowerCase()}-600 border-${color.toLowerCase()}-700`;
 
     return (
         <div className={`border-2 p-2 rounded-full shadow text-center text-white ${classes}`}>
-        <div>
-            <strong>
-                {value}
-            </strong>
-        </div> 
+            <div>
+                <strong>
+                    {value}
+                </strong>
+            </div> 
         </div>
     )
 }
